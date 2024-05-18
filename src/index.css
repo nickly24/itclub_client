@@ -202,6 +202,9 @@ h2{
   margin-top: 10px;
   width: 100%;
 }
+.select_form_small{
+  border: solid #EE6E35;
+}
 .select_form_gr{
   height: 40px;
   border: solid #676665;
@@ -352,4 +355,13 @@ h2{
 
 .custom-modal-footer button:hover {
   background: #0056b3;
+}
+
+.button_m1{
+  padding: 10px;
+  border: none;
+  color: #09C9ED;
+  background: transparent;
+  border: solid #09C9ED 2px;
+  border-radius: 10px;
 }

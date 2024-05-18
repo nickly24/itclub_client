@@ -1,3 +1,6 @@
+.body{
+    position: relative;
+}
 .wrapper{
     margin: auto;
 }
@@ -25,12 +28,16 @@
 
 /* Стили для мобильных устройств (до 767px) */
 @media (max-width: 767px) {
-    
+    .wrapper{
+        width: 95%;
+    }
 }
 
 /* Стили для планшетов (768px до 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
-    
+    .wrapper{
+        width: 95%;
+    }
 }
 
 /* Стили для компьютеров (более 1024px) */
@@ -72,5 +79,8 @@
 
 .pd20{
     padding: 20px;
+}
+.pd5{
+    padding: 5px;
 }
 

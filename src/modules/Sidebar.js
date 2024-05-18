@@ -53,6 +53,14 @@ export default function Sidebar() {
             Добавить пробное
           </div>
         </Link>
+        <Link to="/payinfo">
+          <div
+            className={`sb_button ${activeButton === 'Счета' ? 'sb_active' : 'sb_noactive'}`}
+            onClick={() => handleButtonClick('Счета')}
+          >
+            Счета
+          </div>
+        </Link>
       </div>
     </div>
   );
