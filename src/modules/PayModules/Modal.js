@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Modal.css';
+import './PayInfo.css'; // Import the CSS file
+import { api_main } from '../constants'; // путь к вашему файлу constants.js
 
+const api1 = `${api_main}filials`;
+const api2 = `${api_main}create-payment`;
 const Modal = ({ isOpen, onClose, onSave }) => {
     const [clients, setClients] = useState([]);
     const [selectedClient, setSelectedClient] = useState('');
@@ -10,7 +14,7 @@ const Modal = ({ isOpen, onClose, onSave }) => {
     useEffect(() => {
         const fetchClients = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/filials');
+                const response = await axios.get(api1);
                 setClients(response.data);
             } catch (error) {
                 console.error('Error fetching clients:', error);
@@ -39,7 +43,7 @@ const Modal = ({ isOpen, onClose, onSave }) => {
         };
 
         try {
-            const response = await axios.post('http://localhost:3001/api/create-payment', paymentData, {
+            const response = await axios.post(api2, paymentData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

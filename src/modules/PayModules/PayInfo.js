@@ -3,7 +3,9 @@ import axios from 'axios';
 import Card from './Card';
 import Modal from './Modal';
 import './PayInfo.css'; // Import the CSS file
+import { api_main } from '../constants'; // путь к вашему файлу constants.js
 
+const api = `${api_main}payinfo`;
 const PayInfo = () => {
     const [invoices, setInvoices] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,7 +16,7 @@ const PayInfo = () => {
     useEffect(() => {
         const fetchInvoices = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/payinfo');
+                const response = await axios.get(api);
                 setInvoices(response.data.items);
             } catch (error) {
                 console.error('Error fetching invoices:', error);
@@ -30,7 +32,7 @@ const PayInfo = () => {
 
     const handleSave = async (paymentData) => {
         try {
-            const response = await axios.post('http://localhost:3001/api/payinfo', paymentData, {
+            const response = await axios.post(api, paymentData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
