@@ -22,13 +22,17 @@ export default function ProbnFilials() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [currentKindergarten, setCurrentKindergarten] = useState(null);
   const [editForm, setEditForm] = useState({ name: '', address: '', price: '', metro: '', color: '', trialDate: '', dayOfWeek: '', time: '' });
+  const [loading, setLoading] = useState(true); // Добавляем состояние загрузки
 
   const fetchTrialKindergartens = async () => {
     try {
+      setLoading(true); // Устанавливаем состояние загрузки в true перед запросом
       const response = await axios.get(api);
       setTrialKindergartens(response.data);
     } catch (error) {
       console.error('Ошибка при получении данных:', error);
+    } finally {
+      setLoading(false); // Устанавливаем состояние загрузки в false после завершения запроса
     }
   };
 
@@ -109,15 +113,19 @@ export default function ProbnFilials() {
       <div className='textright'>
         <IoIosRefreshCircle onClick={refreshTrialKindergartens} className="refresh-icon" />
       </div>
-      {sortedKindergartens.map((kindergarten, index) => (
-        <ProbnFilialCard
-          key={index}
-          kindergarten={kindergarten}
-          onDelete={() => openDeleteModal(kindergarten)}
-          onEdit={() => openEditModal(kindergarten)}
-          isHighlighted={index < 3}
-        />
-      ))}
+      {loading ? ( // Условно рендерим сообщение о загрузке
+        <div>Идет загрузка...</div>
+      ) : (
+        sortedKindergartens.map((kindergarten, index) => (
+          <ProbnFilialCard
+            key={index}
+            kindergarten={kindergarten}
+            onDelete={() => openDeleteModal(kindergarten)}
+            onEdit={() => openEditModal(kindergarten)}
+            isHighlighted={index < 3}
+          />
+        ))
+      )}
 
       {/* Delete Confirmation Modal */}
       <Modal
@@ -164,7 +172,6 @@ export default function ProbnFilials() {
           <input type="time" name="time" value={editForm.time} onChange={handleEditFormChange} />
           <div className="custom-modal-footer">
             <button type="submit">Сохранить</button>
-            
           </div>
         </form>
       </Modal>
