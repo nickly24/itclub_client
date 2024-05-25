@@ -1,0 +1,1 @@
+export const API_BASE_URL = 'https://nickly24-itclub-server-453b.twc1.net/api';

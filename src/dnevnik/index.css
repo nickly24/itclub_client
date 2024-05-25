@@ -1,0 +1,380 @@
+/* src/App.css */
+.App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+.filial-card{
+  display: grid;
+  width: 100%;
+  grid-gap: 20px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  padding: 0;
+  margin: 0;
+  color: #4f4d53;
+}
+a{
+  text-decoration: none;
+  color: #4f4d53;
+}
+.orj{
+  color: #EE6E35;
+}
+
+.textright{
+  text-align: right;
+}
+.header_cont{
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+.otdel_name{
+  font-weight: 700;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+
+.card_main{
+  box-shadow: 0 0 8px 2px rgba(119, 119, 119, 0.15);
+  border-radius: 5px;
+
+}
+
+
+.sb_button{
+  border-bottom: 2px solid #f5f5f5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.sb_button:hover{
+  transition: all 0.2s;
+  background: #ee6e35;
+  color: #fff;
+}
+.sb_active{
+  color: #ee6e35;
+}
+
+
+.filial_name{
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.filial_adress{
+  font-weight: 400;
+  font-size: 14px;
+  color: #ee6e35;
+}
+.filial_metro_color{
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  transform: translateY(3px);
+}
+.filial_metro{
+  margin-left: auto;
+  margin-top: 5px;
+}
+
+.refresh-icon{
+  font-size: 30px;
+  text-align: right;
+  margin-left: auto;
+  margin-bottom: 10px;
+  color: #09C9ED;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.refresh-icon:hover {
+  transform: scale(1.1); /* Увеличение иконки при наведении */
+}
+
+.refresh-icon:active {
+  opacity: 0.7; /* Изменение прозрачности при клике */
+}
+
+
+.table_card{
+  padding-left: 10px;
+}
+.table_card_time{
+  font-weight: 700;
+  font-size: 16px;
+  color: #4f4d53;
+}
+.table_card_name{
+  font-weight: 400;
+  font-size: 16px;
+  color: #4f4d53;
+}
+.table_card_address{
+  font-weight: 400;
+  font-size: 14px;
+  color: #ee6e35;
+}
+
+.cardopen{
+  width: 25px;
+  height: 25px;
+  background: #EE6E35;
+  color: white;
+  font-weight: 700;
+  border: none;
+  margin-right: 10px;
+  line-height: 100%;
+  margin-bottom: 0;
+  border-radius: 100%;
+}
+
+
+
+
+.probn_date{
+  margin-top: 10px;
+  font-weight: 700;
+}
+.edit-icon{
+  margin-top: 5px;
+}
+.edit_label{
+  margin-bottom: 10px;
+}
+.table_btn_update{
+  color: #fff;
+  background: #6c9924;
+  border: none;
+  padding: 5px;
+  margin-right: 10px;
+}
+.table_btn_back{
+  color: #fff;
+  background: #b12c2c;
+  border: none;
+  padding: 5px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+
+.add-schedule-button{
+  border-radius: 10px;
+  background: #09C9ED;
+  width: 200px;
+  padding: 10px 0px;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  transition: all 0.5s;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.add-schedule-form{
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.label_form{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.form_btn{
+  width: 100%;
+  background: #EE6E35;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin: auto;
+  height: 40px;
+}
+.select_form{
+  height: 40px;
+  border: solid #EE6E35;
+  margin-top: 10px;
+  width: 100%;
+}
+.select_form_small{
+  border: solid #EE6E35;
+}
+.select_form_gr{
+  height: 40px;
+  border: solid #676665;
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.modal-body label {
+  display: block;
+  margin-top: 10px;
+}
+
+.modal-body input,
+.modal-body textarea {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+
+.modal-footer {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.modal-footer button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-footer button:hover {
+  background: #0056b3;
+}
+
+
+
+
+/* Обновленные стили для модальных окон */
+/* Обновленные стили для модальных окон */
+.custom-modal-content-delete,
+.custom-modal-content-edit {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.custom-modal-close:hover {
+  color: #f00;
+}
+
+.custom-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-modal-body label {
+  display: block;
+  margin-top: 10px;
+}
+
+.custom-modal-body input,
+.custom-modal-body textarea {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+
+.custom-modal-footer {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.custom-modal-footer button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-modal-footer button:hover {
+  background: #0056b3;
+}
+
+.button_m1{
+  padding: 10px;
+  border: none;
+  color: #09C9ED;
+  background: transparent;
+  border: solid #09C9ED 2px;
+  border-radius: 10px;
+}

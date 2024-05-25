@@ -26,6 +26,27 @@
     align-items: center;
 }
 
+.dnevnik-filial-card{
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+  }
+
+.header_gaps{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.menu_header{
+    display: flex;
+}
+.analytic_select_cont{
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    gap: 10px;
+}
 /* Стили для мобильных устройств (до 767px) */
 @media (max-width: 767px) {
     .wrapper{
@@ -58,6 +79,9 @@
         grid-template-columns: repeat(3,1fr);
         grid-gap: 30px;
     }
+    .dnevnik-filial-card{
+        grid-template-columns: 1fr 3fr 1fr;
+    }
    
 }
 
@@ -75,6 +99,9 @@
 }
 .ml5{
     margin-left: 5px;
+}
+.ml15{
+    margin-left: 15px;
 }
 
 .pd20{

@@ -365,3 +365,27 @@ h2{
   border: solid #09C9ED 2px;
   border-radius: 10px;
 }
+
+
+.dnevnik-filial-card{
+  margin-bottom: 20px;
+  border-bottom: 2px solid #dedddd;
+  padding-bottom: 15px;
+
+}
+.menu_names:hover{
+  color: rgb(230, 140, 22);
+}
+.analytic_table{
+  border: solid #c9c9c9 1px;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+.table_comp{
+  padding: 10px;
+  border: solid #c9c9c9 1px;
+}
+.chart{
+  height: 200px;
+}
