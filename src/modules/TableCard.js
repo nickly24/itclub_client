@@ -36,6 +36,7 @@ function TableCard({ schedule, onSave, onDelete }) {
       <div className="table_card_time">{schedule.time.slice(0, 5)}</div>
       <div className="table_card_name">{schedule.name}</div>
       <div className="table_card_address">{schedule.address}</div>
+      <div className="table_card_prepod">{schedule.prepod}</div>
       <MdEdit className="edit-icon" onClick={handleEdit} />
       <MdDeleteForever className="edit-icon" onClick={handleDelete} />
 

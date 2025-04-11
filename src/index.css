@@ -116,6 +116,15 @@ a{
   font-size: 14px;
   color: #ee6e35;
 }
+.table_card_prepod{
+  font-weight: 600;
+  border-top: solid #bcf1f3 1px;
+  margin-top: 5px;
+  width: 60%;
+  padding: 3px;
+  color: #56c5c9;
+  font-size: 12px;
+}
 
 .cardopen{
   width: 25px;
@@ -388,4 +397,8 @@ h2{
 }
 .chart{
   height: 200px;
+}
+
+.stop{
+  display: none;
 }

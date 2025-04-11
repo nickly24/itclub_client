@@ -46,7 +46,7 @@ export default function Filials() {
         <div>Идет загрузка...</div>
       ) : (
         kindergartens.map((kindergarten, index) => (
-          <FilialCard
+          <FilialCard className={kindergarten.status}
             key={index}
             id={kindergarten.id}
             name={kindergarten.name}
